@@ -24,3 +24,5 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount('#app')
+
+console.log('当前的环境是:', process.env.VUE_APP_ENV)

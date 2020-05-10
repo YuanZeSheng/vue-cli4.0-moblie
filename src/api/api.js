@@ -2,6 +2,7 @@ import axios from 'axios'
 
 // axios 配置
 axios.defaults.baseURL = process.env.VUE_APP_URL
+console.log(process.env.VUE_APP_URL)
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
 axios.defaults.withCredentials = true; //让ajax携带cookie
 
@@ -45,11 +46,6 @@ export default {
     handleGetApiTest(param) {
       return Get('/api/test', param)
     },
-    
-   // 登陆
-   handleSendLogin(param) {
-    return Post('/api/test', param)
-  }
 }
 
  
