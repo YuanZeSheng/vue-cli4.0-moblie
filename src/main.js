@@ -1,3 +1,9 @@
+/**
+ * *@2020-5
+ * *@author mikeYuan 
+ */
+
+
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
@@ -6,6 +12,9 @@ import api from './api/api.js'
 import filter from "./filter/filter.js"
 // 公共样式表
 import './assets/common.less'
+
+// px2rem
+import 'lib-flexible/flexible'
 
 Vue.config.productionTip = false
 Vue.prototype.api = api
