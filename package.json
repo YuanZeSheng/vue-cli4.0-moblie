@@ -12,6 +12,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "core-js": "^3.6.4",
+    "fastclick": "^1.0.6",
     "lib-flexible": "^0.3.2",
     "postcss-px2rem": "^0.3.0",
     "vue": "^2.6.11",
