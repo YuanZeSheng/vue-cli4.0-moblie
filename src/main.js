@@ -13,11 +13,15 @@ import filter from "./filter/filter.js"
 // 公共样式表
 import './assets/common.less'
 
+// fastClick 
+import fastClick from 'fastclick'
+
 // px2rem
 import 'lib-flexible/flexible'
 
 Vue.config.productionTip = false
 Vue.prototype.api = api
+fastClick.attach(document.body)
 
 new Vue({
   router,
