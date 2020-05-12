@@ -1,7 +1,8 @@
 <template>
   <div>
     <!-- 模版 -->
-    <p @click="handleClick">测试</p>
+    <p @click="handleClick">调接口</p>
+    {{testData}}
   </div>
 </template>
 
@@ -11,6 +12,7 @@ import { mapState, mapMutations } from "vuex";
 export default {
   data() {
     return {
+      testData: undefined,
     };
   },
   computed: {
@@ -19,7 +21,10 @@ export default {
   methods: {
     // ...mapMutations(['']),
     handleClick() {
-      alert(2);
+      this.api.handleGetApiTest().then(this.handleGetApiTestSucc.bind(this))
+    },
+    handleGetApiTestSucc(res) {
+      this.testData = res
     }
    },
   watch: {

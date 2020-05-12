@@ -1,15 +1,17 @@
 import axios from 'axios'
+import {baseApi} from '@/config'
+
+console.log(baseApi)
 
 // axios 配置
-axios.defaults.baseURL = process.env.VUE_APP_URL
-console.log(process.env.VUE_APP_URL)
+axios.defaults.baseURL = ''
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
 axios.defaults.withCredentials = true; //让ajax携带cookie
 
 // uni axios
 export function Post(url, param, config) {
     return new Promise((resolve, reject) => {
-        axios.post('/api' + url, param, config)
+        axios.post(url, param, config)
             .then(
                 res => {
                     resolve(res.data);
@@ -24,7 +26,7 @@ export function Post(url, param, config) {
 }
 export function Get(url, param) {
     return new Promise((resolve, reject) => {
-        axios.get( '/api' + url, {
+        axios.get( url, {
             params: param
         })
             .then(
@@ -44,7 +46,7 @@ export function Get(url, param) {
 export default {
     // 示例
     handleGetApiTest(param) {
-      return Get('/api/test', param)
+      return Get('/api/******', param)
     },
 }
 

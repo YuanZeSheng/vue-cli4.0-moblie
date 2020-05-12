@@ -26,3 +26,5 @@ new Vue({
 }).$mount('#app')
 
 console.log('当前的环境是:', process.env.VUE_APP_ENV)
+
+console.log(process.env.VUE_APP_URL)
